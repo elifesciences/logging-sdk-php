@@ -17,7 +17,7 @@ class LoggingFactory
         $this->filesPath = realpath($filesPath).'/';
         $this->loggingChannel = $loggingChannel;
     }
-    
+
     public function logger()
     {
         $logger = new Logger($this->loggingChannel);

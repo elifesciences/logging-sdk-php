@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="eLife Logging SDK Test Suite" tests="1" assertions="1" failures="0" errors="0" time="0.005149">
+    <testsuite name="tests\eLife\Logging\LoggingFactoryTest" file="/home/giorgio/code/logging-sdk-php/tests/LoggingFactoryTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.005149">
+      <testcase name="testCreatingALogger" class="tests\eLife\Logging\LoggingFactoryTest" file="/home/giorgio/code/logging-sdk-php/tests/LoggingFactoryTest.php" line="10" assertions="1" time="0.005149"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
