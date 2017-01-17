@@ -1,2 +1,2 @@
 # logging-sdk-php
-Logging utilities for eLife's backends
+PHP SDK for the eLife Sciences backends logging
