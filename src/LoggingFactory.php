@@ -14,7 +14,7 @@ class LoggingFactory
 
     public function __construct(string $filesPath, $loggingChannel = 'default')
     {
-        $this->filesPath = realpath($filesPath).'/';
+        $this->filesPath = rtrim($filesPath, '/').'/';
         $this->loggingChannel = $loggingChannel;
     }
 
