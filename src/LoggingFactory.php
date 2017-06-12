@@ -11,18 +11,20 @@ class LoggingFactory
 {
     private $filesPath;
     private $loggingChannel;
+    private $level;
 
-    public function __construct(string $filesPath, $loggingChannel = 'default')
+    public function __construct(string $filesPath, $loggingChannel = 'default', $level = Logger::DEBUG)
     {
         $this->filesPath = realpath($filesPath).'/';
         $this->loggingChannel = $loggingChannel;
+        $this->level = $level;
     }
 
     public function logger()
     {
         $logger = new Logger($this->loggingChannel);
 
-        $stream = new StreamHandler($this->filesPath.'all.json', Logger::DEBUG);
+        $stream = new StreamHandler($this->filesPath.'all.json', $this->level);
         $stream->pushProcessor(new ProcessIdProcessor());
         $stream->setFormatter(new JsonFormatter());
         $logger->pushHandler($stream);
