@@ -15,7 +15,7 @@ class LoggingFactory
 
     public function __construct(string $filesPath, $loggingChannel = 'default', $level = Logger::DEBUG)
     {
-        $this->filesPath = realpath($filesPath).'/';
+        $this->filesPath = rtrim($filesPath, '/').'/';
         $this->loggingChannel = $loggingChannel;
         $this->level = $level;
     }
