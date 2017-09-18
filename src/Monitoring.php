@@ -9,7 +9,7 @@ use Throwable;
  * Backed by the newrelic PHP extension,
  * gracefully degrades to no-op when it's not present...
  */
-class Monitoring
+final class Monitoring
 {
     private $extension;
     private $appName;
