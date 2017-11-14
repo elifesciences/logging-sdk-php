@@ -16,6 +16,17 @@ Installation
 
 `composer require elife/logging-sdk`
 
+Set up
+------
+
+### Silex
+
+```php
+use eLife\Logging\Silex\LoggerProvider;
+
+$app->register(new LoggerProvider());
+```
+
 Running the tests
 -----------------
 
