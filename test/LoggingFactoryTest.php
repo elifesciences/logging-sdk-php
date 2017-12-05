@@ -24,7 +24,7 @@ final class LoggingFactoryTest extends TestCase
      */
     public function it_creates_a_logger_for_containerized_processes()
     {
-        $factory = LoggingFactory::containerized('my-application', LogLevel::INFO);
+        $factory = LoggingFactory::stderr('my-application', LogLevel::INFO);
         $logger = $factory->logger();
         $this->assertInstanceOf(LoggerInterface::class, $logger);
     }

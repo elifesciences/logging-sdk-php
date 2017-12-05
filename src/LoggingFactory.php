@@ -11,6 +11,7 @@ use Psr\Log\LogLevel;
 
 final class LoggingFactory
 {
+    const STDERR = 'php://stderr';
     private $filesPath;
     private $loggingChannel;
     private $level;
@@ -22,7 +23,7 @@ final class LoggingFactory
         $this->level = $level;
     }
 
-    public static function containerized($loggingChannel = 'default', string $level = LogLevel::DEBUG)
+    public static function stderr($loggingChannel = 'default', string $level = LogLevel::DEBUG)
     {
         return new self(null, $loggingChannel, $level);
     }
@@ -44,7 +45,7 @@ final class LoggingFactory
             $stream->setFormatter($detailedFormatter);
             $logger->pushHandler($stream);
         } else {
-            $stream = new StreamHandler('php://stderr', $this->level);
+            $stream = new StreamHandler(self::STDERR, $this->level);
             $stream->pushProcessor(new ProcessIdProcessor());
             $detailedFormatter = new JsonFormatter();
             $detailedFormatter->includeStacktraces();
