@@ -19,6 +19,7 @@
         "psr/log": "^1.0"
     },
     "require-dev": {
+        "elife/api-problem": "^1.0",
         "phpunit/phpunit": "^5.7 || ^6.0",
         "pimple/pimple": "^3.0",
         "silex/silex": "^2.0"
