@@ -37,7 +37,7 @@ final class LoggerProvider implements BootableProviderInterface, ServiceProvider
                 if (
                     $e instanceof HttpExceptionInterface && $e->getStatusCode() < 500
                     ||
-                    $e instanceof ApiProblemException && $e->getStatusCode() < 500
+                    $e instanceof ApiProblemException && $e->getApiProblem()->getStatus() < 500
                 ) {
                     return LogLevel::INFO;
                 }
