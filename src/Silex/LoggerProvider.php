@@ -35,9 +35,9 @@ final class LoggerProvider implements BootableProviderInterface, ServiceProvider
         $app['logger.listener'] = function () use ($app) {
             return new LogListener($app['logger'], function (Throwable $e) {
                 if (
-                    $e instanceof HttpExceptionInterface && $e->getStatusCode() < 500
+                    ($e instanceof HttpExceptionInterface && $e->getStatusCode() < 500)
                     ||
-                    $e instanceof ApiProblemException && $e->getApiProblem()->getStatus() < 500
+                    ($e instanceof ApiProblemException && $e->getApiProblem()->getStatus() < 500)
                 ) {
                     return LogLevel::INFO;
                 }
