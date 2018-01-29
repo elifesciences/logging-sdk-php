@@ -42,7 +42,7 @@ final class LoggerProvider implements BootableProviderInterface, ServiceProvider
                     return LogLevel::INFO;
                 }
 
-                return LogLevel::CRITICAL;
+                return LogLevel::ERROR;
             });
         };
     }
