@@ -127,7 +127,7 @@ final class LoggerProviderTest extends WebTestCase
         $logs = [];
 
         $handle = fopen($this->logs->getChild($name)->url(), 'r');
-        while (($line = fgets($handle)) !== false) {
+        while (false !== ($line = fgets($handle))) {
             $logs[] = json_decode($line, true);
         }
         fclose($handle);

@@ -57,7 +57,7 @@ final class Monitoring
     public function recordException(Throwable $exception, $message = null)
     {
         if ($this->extension) {
-            if ($message === null) {
+            if (null === $message) {
                 $message = $exception->getMessage();
             }
             newrelic_notice_error($message, $exception);
