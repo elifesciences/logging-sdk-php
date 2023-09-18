@@ -31,7 +31,6 @@
         "symfony/http-kernel": "^2.7 || ^3.0"
     },
     "suggest": {
-        "ext/newrelic": "Enables the Monitoring class",
         "silex/silex": "^2.0, to use LoggerProvider"
     },
     "extra": {
