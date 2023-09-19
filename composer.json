@@ -21,7 +21,7 @@
     "require-dev": {
         "crell/api-problem": "^2.0",
         "elife/api-problem": "^1.0",
-        "mikey179/vfsStream": "^1.6",
+        "mikey179/vfsstream": "^1.6.11",
         "phpunit/phpunit": "^5.7.7 || ^6.0",
         "pimple/pimple": "^3.0",
         "silex/silex": "^2.0",
