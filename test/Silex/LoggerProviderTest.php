@@ -11,7 +11,6 @@ use org\bovigo\vfs\vfsStreamDirectory;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 use Silex\Application;
-use Silex\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Traversable;
