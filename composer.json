@@ -14,7 +14,7 @@
         }
     },
     "require": {
-        "php": "^8.2",
+        "php": "^8.3",
         "monolog/monolog": "^3.0",
         "psr/log": "^3.0",
         "symfony/config": "^7.0",
@@ -24,7 +24,7 @@
         "symfony/http-kernel": "^7.0"
     },
     "require-dev": {
-        "crell/api-problem": "^2.0 || ^3.0",
+        "crell/api-problem": "^3.8.0",
         "elife/api-problem": "^1.0",
         "mikey179/vfsstream": "^1.6.11",
         "phpunit/phpunit": "^12.5.0",
@@ -33,7 +33,7 @@
         "symfony/error-handler": "^7.0"
     },
     "suggest": {
-        "crell/api-problem": "^2.0 || ^3.0, to use LoggingBundle with ApiProblem level detection",
+        "crell/api-problem": "^3.0, to use LoggingBundle with ApiProblem level detection",
         "elife/api-problem": "^1.0, to use LoggingBundle with ApiProblem level detection"
     },
     "extra": {
